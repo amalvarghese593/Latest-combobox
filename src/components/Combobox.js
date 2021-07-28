@@ -22,6 +22,18 @@ export const Combobox = () => {
     code: "+1",
     flag: img3,
   });
+
+  const initialDropdownClass = [
+    { id: 0, class: "dropdown" },
+    { id: 1, class: "dropdown2" },
+  ];
+  const [dropdownClass, setDropdownClass] = useState();
+  function hide() {
+    document.getElementById("thing").style.display = "none";
+  }
+  function unhide() {
+    document.getElementById("thing").style.display = "block";
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
   };
@@ -29,19 +41,31 @@ export const Combobox = () => {
     <div className="combo-wrapper">
       <div className="country-phone-wrapper">
         <div className="country-container">
-          <div className="country-selected" tabIndex="0">
+          <div
+            className="country-selected"
+            tabIndex="0"
+            onClick={() => {
+              unhide();
+            }}
+          >
             {/* <div>{country.code}</div> */}
 
             <img src={country.flag} alt="not found" width="30px" />
             <div>{country.country}</div>
           </div>
-          <div className="dropdown">
+          <div
+            className="dropdown"
+            tabIndex="0"
+            // onclick={(style.display = "none")}
+            id="thing"
+          >
             {data.map((item) => {
               return (
                 <div
                   className="combo-container"
                   onClick={() => {
                     setCountry(item);
+                    hide();
                   }}
                 >
                   <div>{item.code}</div>

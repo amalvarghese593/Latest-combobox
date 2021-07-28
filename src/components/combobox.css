@@ -48,6 +48,7 @@
   background-color: #555;
 }
 .combo-container {
+  /* z-index: 1; */
   display: flex;
   /* padding: 20px; */
   background-color: #ecf0f3;
@@ -94,7 +95,7 @@
   padding-left: 20px;
 }
 .input-container input:focus {
-  border: 1px solid blue;
+  border: 2px solid blue;
 }
 .country-phone-wrapper {
   border: 1px solid red;
@@ -117,10 +118,20 @@
 }
 .dropdown {
   width: 200px;
-  /* border: 2px solid green; */
+  border: 2px solid green;
   height: 180px;
   position: absolute;
   margin-top: 260px;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+  /* z-index: 2; */
+}
+.dropdown:focus {
+  /* display: none; */
+  /* background-color: #00aaff; */
+  /* z-index: 2; */
 }
 /* .combo-container:active {
   display: none;
