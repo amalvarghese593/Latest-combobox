@@ -29,7 +29,7 @@ export const Combobox = () => {
     <div className="combo-wrapper">
       <div className="country-phone-wrapper">
         <div className="country-container">
-          <div className="country-selected">
+          <div className="country-selected" tabIndex="0">
             {/* <div>{country.code}</div> */}
 
             <img src={country.flag} alt="not found" width="30px" />
