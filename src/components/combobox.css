@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .combo-wrapper {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 20px;
   width: 100vw;
   height: 100vh;
@@ -67,10 +67,10 @@
 }
 .combo-container div {
   margin: 5px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .combo-container img {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   margin: 5px;
 }
 .country-container {
@@ -83,7 +83,7 @@
   position: relative;
 }
 .input-container {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 320px;
   position: relative;
 }
@@ -120,7 +120,7 @@
 }
 .dropdown {
   width: 200px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   height: 180px;
   position: absolute;
   margin-top: 260px;

@@ -9,18 +9,18 @@ export const Combobox = () => {
     {
       id: 1,
       country: "IND",
-      code: "+91",
+      code: "(+91)",
       flag: img1,
     },
-    { id: 2, country: "USA", code: "+1", flag: img3 },
-    { id: 3, country: "ENG", code: "+41", flag: img2 },
+    { id: 2, country: "USA", code: "(+1)", flag: img3 },
+    { id: 3, country: "ENG", code: "(+41)", flag: img2 },
   ];
   const [data, setData] = useState(initialState);
   const [country, setCountry] = useState({
-    id: 2,
-    country: "USA",
-    code: "+1",
-    flag: img3,
+    id: 1,
+    country: "IND",
+    code: "(+91)",
+    flag: img1,
   });
 
   const initialDropdownClass = [
@@ -74,10 +74,9 @@ export const Combobox = () => {
                     hide();
                   }}
                 >
-                  <div>{item.code}</div>
-                  <div>{item.country} </div>
-
                   <img src={item.flag} alt="not found" width="30px" />
+                  <div>{item.country} </div>
+                  <div>{item.code}</div>
                 </div>
               );
             })}
