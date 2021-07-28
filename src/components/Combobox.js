@@ -27,13 +27,19 @@ export const Combobox = () => {
     { id: 0, class: "dropdown" },
     { id: 1, class: "dropdown2" },
   ];
+
   const [dropdownClass, setDropdownClass] = useState();
+  // const initialPhoneNumber = { id: null, phoneNumber: "" };
+  const [phoneNumber, setPhoneNumber] = useState([]);
   function hide() {
     document.getElementById("thing").style.display = "none";
   }
   function unhide() {
     document.getElementById("thing").style.display = "block";
   }
+  const handleChange = (event) => {
+    setPhoneNumber({ ...phoneNumber, ph: event.target.value });
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
   };
@@ -83,8 +89,10 @@ export const Combobox = () => {
             type="text"
             placeholder="Add phone number"
             className="input-phone-styling"
+            onChange={handleChange}
           />
         </div>
+        <input type="submit" value="Submit" className="input-submit" />
       </div>
       {/* <input type="submit" value="Submit" className="input-submit" /> */}
       {/* </div> */}
@@ -115,6 +123,7 @@ export const Combobox = () => {
 
         <input type="submit" value="Submit" className="input-submit" />
       </form> */}
+      <div>{console.log(phoneNumber)}</div>
     </div>
   );
 };
