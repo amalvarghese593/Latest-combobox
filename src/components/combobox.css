@@ -6,6 +6,8 @@
 .combo-wrapper {
   border: 1px solid red;
   padding: 20px;
+  width: 100vw;
+  height: 100vh;
 }
 .input-country-styling {
   width: 200px;
@@ -49,14 +51,16 @@
   display: flex;
   /* padding: 20px; */
   background-color: #ecf0f3;
-  border: 1px solid red;
+  border-bottom: 2px solid #b1b1b1;
+  border-left: 2px solid #b1b1b1;
+  border-right: 2px solid #b1b1b1;
   width: 200px;
   height: 50px;
   /* justify-content: center; */
   padding-left: 20px;
   align-items: center;
-  margin-bottom: 5px;
-  border-radius: 10px;
+  /* margin-bottom: 5px; */
+  /* border-radius: 10px; */
 }
 .combo-container div {
   margin: 5px;
@@ -66,3 +70,53 @@
   border: 1px solid blue;
   margin: 5px;
 }
+.country-container {
+  width: 200px;
+  height: 70px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input-container {
+  border: 1px solid blue;
+  width: 320px;
+  position: relative;
+}
+.input-container span {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  /* border: 1px solid red; */
+}
+.input-container input {
+  padding-left: 20px;
+}
+.country-phone-wrapper {
+  border: 1px solid red;
+  display: flex;
+  width: 50%;
+}
+.country-selected {
+  width: 160px;
+  height: 50px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.country-selected div {
+  margin: 10px;
+}
+.dropdown {
+  width: 200px;
+  /* border: 2px solid green; */
+  height: 180px;
+  position: absolute;
+  margin-top: 260px;
+}
+/* .combo-container:active {
+  display: none;
+  transition: 3s;
+} */
