@@ -23,19 +23,19 @@ export const Combobox = () => {
     flag: img1,
   });
 
-  const initialDropdownClass = [
-    { id: 0, class: "dropdown" },
-    { id: 1, class: "dropdown2" },
-  ];
+  // const initialDropdownClass = [
+  //   { id: 0, class: "dropdown" },
+  //   { id: 1, class: "dropdown2" },
+  // ];
 
-  const [dropdownClass, setDropdownClass] = useState();
+  // const [dropdownClass, setDropdownClass] = useState();
   // const initialPhoneNumber = { id: null, phoneNumber: "" };
   const [phoneNumber, setPhoneNumber] = useState([]);
   function hide() {
-    document.getElementById("thing").style.display = "none";
+    document.getElementById("country-box").style.display = "none";
   }
   function unhide() {
-    document.getElementById("thing").style.display = "block";
+    document.getElementById("country-box").style.display = "block";
   }
   const handleChange = (event) => {
     setPhoneNumber({ ...phoneNumber, ph: event.target.value });
@@ -63,7 +63,7 @@ export const Combobox = () => {
             className="dropdown"
             tabIndex="0"
             // onclick={(style.display = "none")}
-            id="thing"
+            id="country-box"
           >
             {data.map((item) => {
               return (
@@ -87,11 +87,15 @@ export const Combobox = () => {
           <input
             type="text"
             placeholder="Add phone number"
-            className="input-phone-styling"
             onChange={handleChange}
           />
         </div>
-        <input type="submit" value="Submit" className="input-submit" />
+        <input
+          type="submit"
+          value="Submit"
+          className="input-submit"
+          onSubmit={handleSubmit}
+        />
       </div>
       {/* <input type="submit" value="Submit" className="input-submit" /> */}
       {/* </div> */}
